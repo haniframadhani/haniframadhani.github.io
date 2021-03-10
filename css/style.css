@@ -233,6 +233,9 @@ nav {
     text-decoration: none;
     color: #8b8685;
 }
+.pp {
+  transform: rotateY(180deg);
+}
 /* akhir main */
 /* project */
 .project h3 {
