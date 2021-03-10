@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #111B1E;
+}
+/* navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #152226;
+    font-family: 'Ubuntu', sans-serif;
+}
+.logo a {
+    color: #E4DBD9;
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+}
+.nav-link {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+}
+.nav-link li {
+    list-style: none;
+    text-transform: uppercase;
+    align-items: center;
+}
+.nav-link a {
+    color: #E4DBD9;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    align-items: center;
+}
+.burger {
+    display: none;
+}
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #E4DBD9;
+    margin: 5px;
+    transition: all 300ms ease;
+}
+@media screen and (max-width:576px) {
+    body {
+        overflow-x: hidden;
+    }
+    .container {
+      max-width: 720px;
+    }
+    /* navbar */
+    .nav-link {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: #152226;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in;
+    }
+    .nav-link li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+
+    }
+    /* akhir navbar */
+    .header {
+      margin: auto;
+    }
+    .main h1 {
+        text-align: center;
+    }
+    .main p {
+      text-align: justify;
+    }
+    .social-mail li {
+      position: relative;
+      top: -37px;
+      left: 115px;
+      margin-left: 10px;
+    }
+    .download {
+      position: relative;
+      top: -40px;
+    }
+    .project h3 {
+      margin-top: 150px !important;
+    }
+    .tool img {
+      width: 70px !important;
+    }
+}
+.nav-active {
+    transform: translateX(0);
+}
+@media screen and (max-width:768px) {
+  .nav-link {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+  .social-mail li {
+    position: relative;
+    top: -37px;
+    left: 115px;
+    margin-left: 10px;
+  }
+  .download {
+    position: relative;
+    top: -45px;
+    left: 2px;
+  }
+  .project h3 {
+    margin-top: 50px;
+  }
+  .footer p {
+    text-align: center;
+  }
+}
+@media screen and (max-width:992px) {
+  .social-mail li {
+    position: relative;
+    top: -37px;
+    left: 115px;
+    margin-left: 10px;
+  }
+  .download {
+    position: relative;
+    top: -45px;
+    left: 2px;
+  }
+  .project h3 {
+    margin-top: 100px;
+  }
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-5px);
+}
+/* akhir navbar */
+/* main */
+.main {
+  margin-top: 80px;
+}
+.header {
+  color: #E4DBD9;
+  font-family: 'ubuntu', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 48px;
+}
+.main p {
+  color: #E4DBD9;
+  font-family: 'montserrat', sans-serif;
+  line-height: 1.2;
+  letter-spacing: -2%;
+  justify-content: center;
+}
+.main p span {
+  color: #6E93D6;
+}
+.main p a {
+  text-decoration: none;
+  font-style: italic;
+  font-size: 16px;
+  font-family: 'montserrat', sans-serif;
+  color: #E4DBD9;
+}
+.social-mail {
+    margin-top: 22px;
+}
+.social-mail a {
+  font-family: 'montserrat', sans-serif;
+    margin-left: 15px;
+}
+.btn-mail {
+  background-color: #6E93D6;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 300;
+  color: #E4DBD9;
+  margin-left: 0 !important;
+}
+.btn-mail:hover {
+    color: #E4DBD9;
+    box-shadow: 0 0 16px 6px rgba(110, 147, 214, .16);
+    transition: 300ms;
+}
+.main li {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 1vh;
+}
+.main a {
+    font-size: 20px;
+    line-height: 22px;
+}
+.download {
+  margin-top: -9px;
+}
+.download a {
+    font-family: 'montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
+    color: #8b8685;
+}
+/* akhir main */
+/* project */
+.project h3 {
+  font-family: 'ubuntu', sans-serif;
+  font-weight: 700;
+  color: #E4DBD9;
+  margin-top: 200px;
+}
+.project-page h3 {
+  font-family: 'ubuntu', sans-serif;
+  font-weight: 700;
+  color: #E4DBD9;
+  margin-top: 100px;
+}
+.project-page .row {
+  margin-bottom: 200px;
+}
+
+.hero {
+  margin-top: 100px;
+}
+.project a {
+  text-decoration: none;
+}
+.project-page a {
+  text-decoration: none;
+}
+.card {
+  border: none;
+}
+.card:hover {
+  box-shadow: 0 0 16px 3px rgba(255, 255, 255, .05);
+}
+.card-body {
+  border-radius: 0 0 0.25rem 0.25rem;
+  background-color: #2F4C58;
+}
+.card-body h5 {
+  font-family: 'ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #E4DBD9;
+}
+.card-body p {
+  font-family: 'montserrat', sans-serif;
+  font-size: 18px;
+  letter-spacing: -2%;
+  font-weight: 400;
+  color: #E4DBD9;
+}
+/* akhir project */
+
+/* tool & skill */
+.tool h3 {
+  margin-top: 100px;
+  font-family: 'ubuntu', sans-serif;
+  font-weight: 700;
+  color: #E4DBD9;
+}
+.tool figcaption {
+  text-align: center;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 400;
+  color: #E4DBD9;
+}
+.tool img {
+  width: 100px;
+}
+/* akhir tool & skill */
+/* footer */
+footer {
+  background-color: #63A583;
+  margin-top: 100px;
+  margin-bottom: 0;
+  font-family: 'montserrat', sans-serif;
+  color: #E4DBD9;
+}
+.kaki li {
+  display: inline-block;
+  text-decoration: none;
+ }
+.kaki a {
+  font-size: 22px;
+ margin-left: 2vh;
+}
+.context {
+  font-size: 16px;
+  letter-spacing: -2%;
+}
+.copy {
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: -2%;
+}
+/* akhir footer */

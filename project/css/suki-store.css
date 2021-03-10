@@ -1,0 +1,47 @@
+.jumbotron {
+  height: 450px;
+  background-image: url(../image/suki-store/jumbo.png);
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #e0e0e0;
+  overflow: hidden;
+}
+h2 {
+font-family: 'ubuntu', sans-serif;
+color: #E4DBD9;
+font-weight: 700;
+}
+p {
+font-family: 'montserrat', sans-serif;
+font-weight: 400;
+color: #E4DBD9;
+line-height: 1.2;
+letter-spacing: -2%;
+}
+p span {
+  color: #6E93D6;
+}
+p a {
+  text-decoration: none !important;
+}
+p a span:hover {
+  color: #E4DBD9;
+  background-color: #6e93d6;
+  transition: 300ms;
+}
+@media screen and (max-width:576px) {
+h2 {
+  text-align: center;
+}
+p {
+  text-align: justify;
+}
+}
+@media screen and (max-width:768px) {
+p {
+  text-align: justify;
+}
+}
