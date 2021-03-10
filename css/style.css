@@ -101,7 +101,10 @@ nav {
       margin-top: 150px !important;
     }
     .tool img {
-      width: 70px !important;
+      width: 50px !important;
+    }
+    .tool figcaption {
+      font-size: 10px !important;
     }
 }
 .nav-active {
@@ -126,6 +129,9 @@ nav {
   }
   .project h3 {
     margin-top: 50px;
+  }
+  .tool img {
+    width: 60px !important;
   }
   .footer p {
     text-align: center;
