@@ -22,7 +22,7 @@ nav {
     text-decoration: none;
 }
 .nav-link {
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
     width: 40%;
     align-items: center;
@@ -38,6 +38,14 @@ nav {
     font-weight: 400;
     font-size: 16px;
     align-items: center;
+}
+.nav-link a:active {
+  color: #6E93D6;
+  font-weight: 500;
+}
+ul {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 .burger {
     display: none;
