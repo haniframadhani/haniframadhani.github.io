@@ -42,12 +42,14 @@ nav {
 }
 .nav-link li:hover {
   background-color: #6e93d6;
+  border-radius: 2px;
 }
 .nav-link li a:active {
   color: #6E93D6;
 }
 .nav-link li:active {
   background-color: #E4DBD9;
+  border-radius: 2px;
 }
 ul {
   margin-top: 0 !important;
