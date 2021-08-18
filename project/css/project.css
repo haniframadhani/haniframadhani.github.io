@@ -1,0 +1,11 @@
+.jumbotron {
+    height: 28.125em;
+    background-image: url(../image/project.png);
+    position: relative;
+    background-position: center !important;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -1em -1em;
+    overflow: hidden;
+}

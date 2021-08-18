@@ -14,6 +14,8 @@
 	--icon-color: #f1e9de;
 	--card-color: #480C73;
 	--footer-background: #0047AA;
+	--a-color: #0047aa;
+	--a-color-hover: #00AAFF;
 }
 
 html[data-theme='light'] {
@@ -30,6 +32,8 @@ html[data-theme='light'] {
 	--icon-color: #300862;
 	--card-color: #300862;
 	--footer-background: #7C82FF;
+	--a-color: #0047aa;
+	--a-color-hover: #00AAFF;
 }
 
 * {
@@ -174,6 +178,16 @@ p {
 	line-height: 150%;
 }
 
+.link {
+	font-family: 'montserrat', sans-serif;
+	font-weight: 400;
+	color: var(--a-color);
+}
+
+.link:hover {
+	color: var(--a-color-hover);
+}
+
 .icon {
 	color: var(--icon-color);
 }
@@ -254,6 +268,35 @@ p {
 
 .card p:hover,  .card h5:hover {
 	color: var(--link-hover)
+}
+
+.jumbo {
+	margin-top: 7em;
+}
+
+.jumbotron {
+	padding: 2rem 1rem;
+	margin-bottom: 2rem;
+	background-color: #E4DBD9;
+	border-radius: .3em;
+	-webkit-border-radius: .3em;
+	-moz-border-radius: .3em;
+	-ms-border-radius: .3em;
+	-o-border-radius: .3em;
+}
+
+.jumbotron-fluid {
+	padding-right: 0;
+	padding-left: 0;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+}
+
+.img-shadow {
+	box-shadow: 0px 4px 30px rgba(10, 10, 10, .1);
 }
 
 figcaption {
@@ -348,6 +391,10 @@ margin-left: 1em;
 
 	#project, #tool, footer {
 		margin: 9.375em 0 0 0;
+	}
+
+	.jumbotron {
+		padding: 4rem 2rem;
 	}
 
 	#tool img {
