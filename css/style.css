@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 :root {
-  --background-color: #300862;
-  --navbar: #480C92;
-  --text-color: #F1E9DE;
+	--background-color: #300862;
+	--navbar: #480C92;
+	--text-color: #F1E9DE;
 	--background-checkbox: #F1E9DE;
 	--button-toggle: #170350;
 	--link-hover: #Fff;
@@ -14,16 +14,16 @@
 	--icon-color: #f1e9de;
 	--card-color: #480C73;
 	--footer-background: #0047AA;
-	--a-color: #0047aa;
+	--a-color: #F1E9DE;
 	--a-color-hover: #00AAFF;
 }
 
 html[data-theme='light'] {
-  --background-color: #F1E9DE;
-  --navbar: #300862;
+	--background-color: #F1E9DE;
+	--navbar: #300862;
+	--text-color: #170350;
 	--background-checkbox: #480C92;
 	--button-toggle: #F1E9DE;
-	--text-color: #170350;
 	--link-hover: #FAF8F4;
 	--link-color: #f1e9de;
 	--navbar-color: #300862;
@@ -32,11 +32,13 @@ html[data-theme='light'] {
 	--icon-color: #300862;
 	--card-color: #300862;
 	--footer-background: #7C82FF;
-	--a-color: #0047aa;
+	--a-color: #170350;
 	--a-color-hover: #00AAFF;
 }
 
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -52,7 +54,7 @@ input[type='checkbox'] {
 	visibility: hidden;
 }
 
-input[type='checkbox']:checked ~ .check:before {
+input[type='checkbox']:checked~.check:before {
 	transform: translateX(20px);
 	-webkit-transform: translateX(20px);
 	-moz-transform: translateX(20px);
@@ -60,12 +62,13 @@ input[type='checkbox']:checked ~ .check:before {
 	-o-transform: translateX(20px);
 }
 
-input[type='checkbox']:checked ~ .check {
+input[type='checkbox']:checked~.check {
 	background-color: var(--background-checkbox);
 	box-shadow: 0 0 0 50000px rgba(10, 10, 10, .3);
 }
 
-.check:before, .check:after {
+.check:before,
+.check:after {
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -118,7 +121,8 @@ input[type='checkbox']:checked ~ .check {
 	cursor: pointer;
 }
 
-li, a {
+li a,
+a {
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 500;
 	color: var(--link-color);
@@ -136,12 +140,11 @@ header {
 
 .navlink {
 	list-style: none;
+	display: flex;
+	gap: 1.25em;
+	align-items: center;
 }
 
-.navlink li {
-	display: inline-block;
-	padding: 0 1.25em;
-}
 
 .navlink li a {
 	transition: all .3s ease 0;
@@ -166,9 +169,15 @@ header {
 	margin: 5px;
 	transition: all 300ms ease;
 }
+
 /* akhir navbar */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 700;
 }
@@ -179,9 +188,15 @@ p {
 }
 
 .link {
+	text-decoration: underline;
 	font-family: 'montserrat', sans-serif;
 	font-weight: 400;
 	color: var(--a-color);
+	transition: .3s;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-ms-transition: .3s;
+	-o-transition: .3s;
 }
 
 .link:hover {
@@ -209,19 +224,29 @@ p {
 }
 
 .btn-mail {
-  background-color: var(--button-color);
-  font-family: 'montserrat', sans-serif;
-  font-weight: 300;
-  color: var(--text-color-button);
-  margin-left: 0 !important;
+	background-color: var(--button-color);
+	font-family: 'montserrat', sans-serif;
+	font-weight: 300;
+	color: var(--text-color-button);
+	margin-left: 0 !important;
 	display: flex;
 	max-width: 120px;
-	justify-self: center;
+	justify-items: center;
 }
-.btn-mail:hover {
-    color: var(--link-hover);
-    /* box-shadow: 0 0 16px 6px rgba(110, 147, 214, .16); */
-    transition: 300ms;
+
+.btn-mail:hover,
+.btn-visit:hover,
+.btn-github:hover {
+	color: var(--link-hover);
+	transition: 300ms;
+}
+
+.btn-visit,
+.btn-github {
+	background-color: var(--button-color);
+	font-family: 'montserrat', sans-serif;
+	font-weight: 300;
+	color: var(--text-color-button);
 }
 
 #hero ul {
@@ -239,6 +264,12 @@ p {
 	display: flex;
 }
 
+.download {
+	display: flex;
+	align-items: center;
+	gap: .2em;
+}
+
 .download a {
 	font-size: .75em;
 	font-family: 'montserrat', sans-serif;
@@ -254,7 +285,8 @@ p {
 	margin: 12.5em 0 0 0;
 } */
 
-#project h3, #tool h3 {
+#project h3,
+#tool h3 {
 	padding: 6.25em 0 0 0;
 }
 
@@ -262,12 +294,22 @@ p {
 	background-color: var(--card-color);
 }
 
-.card p, .card h5 {
+.card p,
+.card h5 {
 	color: var(--link-color)
 }
 
-.card p:hover,  .card h5:hover {
+.card p:hover,
+.card h5:hover {
 	color: var(--link-hover)
+}
+
+.card-text {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .jumbo {
@@ -299,17 +341,21 @@ p {
 	box-shadow: 0px 4px 30px rgba(10, 10, 10, .1);
 }
 
+.skill-icon {
+	font-size: 5em;
+}
+
 figcaption {
 	font-family: 'montserrat', sans-serif;
 	color: var(--text-color) !important;
 }
 
 footer {
-  background-color: var(--footer-background);
-  margin-top: 100px;
-  margin-bottom: 0;
-  font-family: 'montserrat', sans-serif;
-  color: var(--text-color-button);
+	background-color: var(--footer-background);
+	margin-top: 100px;
+	margin-bottom: 0;
+	font-family: 'montserrat', sans-serif;
+	color: var(--text-color-button);
 }
 
 .kaki h5 {
@@ -326,22 +372,22 @@ footer {
 
 .kaki li {
 	display: flex;
-  text-decoration: none;
- }
+	text-decoration: none;
+}
 
 .kaki a {
 	color: var(--icon-color);
-  font-size: 1.375em;
-margin-left: 1em;
+	font-size: 1.375em;
+	margin-left: 1em;
 }
 
 .context {
-  font-size: 1em;
+	font-size: 1em;
 }
 
 .copy {
-  font-weight: 300;
-  font-size: 0.75em;
+	font-weight: 300;
+	font-size: 0.75em;
 }
 
 @media screen and (max-width:576px) {
@@ -389,7 +435,9 @@ margin-left: 1em;
 		padding: 1.87em 0 0 0;
 	}
 
-	#project, #tool, footer {
+	#project,
+	#tool,
+	footer {
 		margin: 9.375em 0 0 0;
 	}
 
@@ -400,6 +448,7 @@ margin-left: 1em;
 	#tool img {
 		width: 3.12em !important;
 	}
+
 	#tool figcaption {
 		font-size: 0.625em !important;
 	}
@@ -411,35 +460,34 @@ margin-left: 1em;
 
 @media screen and (max-width:768px) {
 	.navlink {
-	display: flex;
-	justify-content: space-around;
-	width: 80%;
-  }
+		display: flex;
+		justify-content: space-around;
+		width: 80%;
+	}
 
 	#tool img {
-    width: 3.75em
+		width: 3.75em !important;
+	}
 
-		!important;
-  }
-}
-
-@media screen and (max-width:992px) {
-
+	.figure-img {
+		font-size: 3em;
+	}
 }
 
 @keyframes navLinkFade {
 	from {
-			opacity: 0;
-			transform: translateX(50px);
+		opacity: 0;
+		transform: translateX(50px);
 	}
+
 	to {
-			opacity: 1;
-			transform: translateX(0);
+		opacity: 1;
+		transform: translateX(0);
 	}
 }
 
 .toggle .line1 {
-	transform: rotate(-45deg) translate(-5px,5px);
+	transform: rotate(-45deg) translate(-5px, 5px);
 }
 
 .toggle .line2 {
@@ -447,5 +495,5 @@ margin-left: 1em;
 }
 
 .toggle .line3 {
-	transform: rotate(45deg) translate(-5px,-5px);
+	transform: rotate(45deg) translate(-5px, -5px);
 }

@@ -1,0 +1,10 @@
+.jumbotron {
+  height: 28.125em;
+  background-image: url(../image/suki-store/sukistore.webp);
+  position: relative;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: auto;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
