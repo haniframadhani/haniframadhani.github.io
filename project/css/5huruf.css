@@ -1,0 +1,10 @@
+.jumbotron {
+  height: 28.125em;
+  background-image: url(../image/5huruf/5huruf-desktop.webp);
+  position: relative;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}

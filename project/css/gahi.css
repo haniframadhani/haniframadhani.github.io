@@ -1,0 +1,10 @@
+.jumbotron {
+  height: 28.125em;
+  background-image: url(../image/gahi/gahi.webp);
+  position: relative;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: auto;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
